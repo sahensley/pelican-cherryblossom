@@ -11,14 +11,10 @@
                 <footer class="post-info">
                     <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
                     {% if SPACER_CHAR %}{{ SPACER_CHAR }}{% else %}•{% endif %}
-                    <!-- <address class="vcard author"> -->
-                    <!-- {% for author in article.authors %} -->
-                    <!--     <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> -->
-                    <!-- {% endfor %} -->
-                    <!-- </address> -->
-                    <!-- {% if SPACER_CHAR %}{{ SPACER_CHAR }}{% else %}•{% endif %} -->
                     {% for tag in article.tags %}
-                        <a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a>
+                    <span class="tags">
+                        <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+                    </span>
                     {% endfor %}
                 </footer><!-- /.post-info -->
                 <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->

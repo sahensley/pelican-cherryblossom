@@ -39,7 +39,7 @@
       {{ article.locale_modified }}
     </time>
     {% endif %}
-    {% if article.authors %}
+    {% if article.authors and authors|length > 1 %}
     <address class="vcard author">
       By {% for author in article.authors %}
           <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
@@ -53,7 +53,6 @@
     {% endif %}
     {% if article.tags %}
     <div class="tags">
-        Tags:
         {% for tag in article.tags %}
             <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
         {% endfor %}

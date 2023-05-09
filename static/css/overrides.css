@@ -20,6 +20,15 @@
 #post-list li {
     list-style-type: none;
 }
+
+.tags a {
+    border-color: inherit;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: thin;
+    padding-left: 2px;
+    padding-right: 2px;
+}
 /* footer.post-info .published .vcard .author { */
 /*     display: inline; */
 /*     white-space: nowrap; */
