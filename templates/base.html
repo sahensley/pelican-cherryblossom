@@ -71,6 +71,9 @@
                 </address><!-- /#about -->
         {% if GOATCOUNTER_SITENAME %}
         <script data-goatcounter="https://{{ GOATCOUNTER_SITENAME }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+        <noscript>
+          <img src="https://{{ GOATCOUNTER_SITENAME }}.goatcounter.com/count?p=/test-noscript">
+        </noscript>
         {% endif %}
         </footer><!-- /#contentinfo -->
 </body>
