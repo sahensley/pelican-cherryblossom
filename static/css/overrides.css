@@ -29,16 +29,7 @@
     padding-left: 2px;
     padding-right: 2px;
 }
-/* footer.post-info .published .vcard .author { */
-/*     display: inline; */
-/*     white-space: nowrap; */
-/* } */
+
 time.published {
     display: inline;
 }
-/* address.vcard { */
-/*     display: inline; */
-/* } */
-/* address.vcard { */
-/*     /1* display: inline-flex; *1/ */
-/* } */

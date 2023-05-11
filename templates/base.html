@@ -6,20 +6,32 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="viewport" content="width=device-width">
+
+
         {% if CSS_FILE %}
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}" />
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}" media="screen" />
         {% else %}
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/sakura.css" />
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/sakura.css" media="screen" />
+        {% endif %}
+        {% if CSS_DARK_FILE %}
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_DARK_FILE}}" media="screen and (prefers-color-scheme: dark)" />
+        {% else %}
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/sakura-dark.css" media="screen and (prefers-color-scheme: dark)" />
         {% endif %}
         {% if OVERRIDES_FILE %}
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ OVERRIDES_FILE }}" />
         {% else %}
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/overrides.css" />
         {% endif %}
-        {% if PYGMENT_FILE %}
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/{{ PYGMENT_FILE }}.css" />
+        {% if PYGMENTS_FILE %}
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/{{ PYGMENTS_FILE }}" media="screen" />
         {% else %}
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygment.css" />
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments-default.css" media="screen" />
+        {% endif %}
+        {% if PYGMENTS_DARK_FILE %}
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/{{ PYGMENTS_DARK_FILE }}" media="screen and (prefers-color-scheme: dark)"/>
+        {% else %}
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments-fruity.css" media="screen and (prefers-color-scheme: dark)"/>
         {% endif %}
         {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
