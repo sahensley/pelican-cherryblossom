@@ -39,14 +39,14 @@
       {{ article.locale_modified }}
     </time>
     {% endif %}
-    {% if article.authors and authors|length > 1 %}
+    {% if (article.authors and authors|length > 1) and (HIDE_ARTICLE_AUTHORS is not defined) %}
     <address class="vcard author">
       By {% for author in article.authors %}
           <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
         {% endfor %}
     </address>
     {% endif %}
-    {% if article.category %}
+    {% if article.category and HIDE_ARTICLE_CATEGORY is not defined %}
     <div class="category">
         Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
     </div>
