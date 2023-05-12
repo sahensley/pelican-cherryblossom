@@ -83,14 +83,16 @@
         {% endblock %}
         <footer id="contentinfo" class="body">
                 <address id="about" class="vcard body">
-                Proudly powered by <a href="https://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="https://www.python.org/">Python</a>.
+                Site powered by <a href="https://getpelican.com/">Pelican</a>,
+                and the <a href="https://github.com/sahensley/pelican-cherryblossom/">cherryblossom</a> theme.
                 </address><!-- /#about -->
         {% if GOATCOUNTER_SITENAME %}
+        <script>
+        window.goatcounter = {
+            no_onload: ('doNotTrack' in navigator && navigator.doNotTrack === '1'),
+        };
+        </script>
         <script data-goatcounter="https://{{ GOATCOUNTER_SITENAME }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-        <noscript>
-          <img src="https://{{ GOATCOUNTER_SITENAME }}.goatcounter.com/count?p=/test-noscript">
-        </noscript>
         {% endif %}
         </footer><!-- /#contentinfo -->
 </body>
